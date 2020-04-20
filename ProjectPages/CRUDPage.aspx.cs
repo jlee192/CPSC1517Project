@@ -43,7 +43,7 @@ namespace CPSC1517Project.ProjectPages
                 }
                 else
                 {
-                    AddButton.Enabled = false;
+                    AddButton.Enabled = true;
                     ProgramController sysmgr = new ProgramController();
                     Programs info = null;
                     info = sysmgr.FindByPKID(int.Parse(pid));
@@ -82,12 +82,12 @@ namespace CPSC1517Project.ProjectPages
             Message.CssClass = cssclass;
             Message.DataSource = errormsglist;
             Message.DataBind();
-            LabelMessage1.InnerHtml = "";
-            for (int i = 0; i <= errormsglist.Count - 1; i++)
-            {
-                LabelMessage1.InnerHtml += "<br />"
-                                        + errormsglist[i];
-            }
+            //LabelMessage1.InnerHtml = "";
+            //for (int i = 0; i <= errormsglist.Count - 1; i++)
+            //{
+            //    LabelMessage1.InnerHtml += "<br />"
+            //                            + errormsglist[i];
+            //}
         }
         protected void BindSchoolList()
         {
@@ -204,7 +204,7 @@ namespace CPSC1517Project.ProjectPages
                     item.SchoolCode = SchoolList.SelectedValue;
                     item.DiplomaName = DiplomaName.Text;
                     item.Tuition = decimal.Parse(Tuition.Text);
-                    item.InternationalTuition = decimal.Parse(Tuition.Text);
+                    item.InternationalTuition = decimal.Parse(InternationalTuition.Text);
                     int newID = sysmgr.Add(item);
                     ProgramID.Text = newID.ToString();
                     errormsgs.Add("Record has been added");
