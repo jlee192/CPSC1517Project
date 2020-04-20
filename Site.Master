@@ -61,7 +61,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarSubMenu">
                                     <a class="dropdown-item"
-                                            href="~/ProjectPages/Programs.aspx"
+                                            href="~/ProjectPages/ProgramPage.aspx"
                                             style="color:black" runat="server">
                                             A03 - Programs
                                     </a>

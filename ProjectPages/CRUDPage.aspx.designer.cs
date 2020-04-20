@@ -11,7 +11,7 @@ namespace CPSC1517Project.ProjectPages
 {
 
 
-    public partial class Programs
+    public partial class CRUDPage
     {
     }
 }
