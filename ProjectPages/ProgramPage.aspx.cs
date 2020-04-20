@@ -45,7 +45,7 @@ namespace CPSC1517Project.ProjectPages
         {
             if (List01.SelectedIndex == 0)
             {
-                MessageLabel.Text = "Select a school to view programs";
+                MessageLabel.Text = "Select school from list";
             }
             else
             {
@@ -53,7 +53,7 @@ namespace CPSC1517Project.ProjectPages
                 {
                     ProgramController sysmgr02 = new ProgramController();
                     List<Programs> info02 = null;
-                    info02 = sysmgr02.FindByID(int.Parse(List01.SelectedValue));
+                    info02 = sysmgr02.FindBySchoolCode(List01.SelectedValue);
                     info02.Sort((x, y) => x.ProgramName.CompareTo(y.ProgramName));
                     Fetch02.Enabled = true;
                     List02.Enabled = true;
@@ -73,7 +73,7 @@ namespace CPSC1517Project.ProjectPages
         {
             if (List02.SelectedIndex == 0)
             {
-                MessageLabel.Text = "Select a Program";
+                MessageLabel.Text = "Select a program.";
             }
             else
             {

@@ -17,7 +17,7 @@
         </div>
         <div class="col-md-4 text-left">
             <asp:DropDownList ID="List02" runat="server"></asp:DropDownList>&nbsp;&nbsp;
-            <asp:Button ID="Fetch02" runat="server" Text="Fetch" 
+            <asp:Button ID="Fetch02" runat="server" Text="Select" 
                  CausesValidation="false" OnClick="Fetch_Click02"/>
         </div>
     </div>
